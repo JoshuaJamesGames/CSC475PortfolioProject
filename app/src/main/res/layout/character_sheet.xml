@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/battleBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/greycustomborder"
+        android:elevation="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+        <LinearLayout
+            android:id="@+id/groupInitiative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupSpeed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupArmorClass"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvInitiative"
+                android:layout_width="60sp"
+                android:layout_height="40dp"
+                android:text="Initiative"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etInitiative"
+                android:layout_width="60sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupHitDice"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupInitiative"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="60sp"
+                android:layout_height="40dp"
+                android:text="Speed"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etSpeed"
+                android:layout_width="60sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupHitDice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupSpeed"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvHitDice"
+                android:layout_width="60sp"
+                android:layout_height="40dp"
+                android:text="HitDice"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etHitDice"
+                android:layout_width="60sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupArmorClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupInitiative"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvArmorClass"
+                android:layout_width="60sp"
+                android:layout_height="40dp"
+                android:text="Armor Class"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etArmorClass"
+                android:layout_width="60sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hpBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/redcustomborder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupInitiative">
+
+            <CheckBox
+                android:id="@+id/cbDeathSave3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbDeathSave2"
+                app:layout_constraintTop_toBottomOf="@+id/groupTempHP" />
+
+            <CheckBox
+                android:id="@+id/cbDeathSave2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/cbDeathSave3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbDeathSave1"
+                app:layout_constraintTop_toBottomOf="@+id/groupCurrentHP" />
+
+            <LinearLayout
+                android:id="@+id/groupTempHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/groupCurrentHP"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTempHP"
+                    android:layout_width="60sp"
+                    android:layout_height="40dp"
+                    android:text="Temp HP"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etTempHP"
+                    android:layout_width="60sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupMaxHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/groupCurrentHP"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvMaxHP"
+                    android:layout_width="60sp"
+                    android:layout_height="40dp"
+                    android:text="Max HP"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etMaxHP"
+                    android:layout_width="60sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupCurrentHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/groupTempHP"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/groupMaxHP"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvCurrentHP"
+                    android:layout_width="60sp"
+                    android:layout_height="40dp"
+                    android:text="Current HP"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etCurrentHP"
+                    android:layout_width="60sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbDeathSave1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/cbDeathSave2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupMaxHP" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proficiencyBox" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/proficiencyBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/greycustomborder"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/groupCha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupWis"
+            app:layout_constraintTop_toBottomOf="@+id/groupCon">
+
+            <TextView
+                android:id="@+id/tvCharisma"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Charisma"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etCharisma"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvCharismaMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupWis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupCha"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupInt"
+            app:layout_constraintTop_toBottomOf="@+id/groupDex">
+
+            <TextView
+                android:id="@+id/tvWisdom"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Wisdom"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etWisdom"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvWisdomMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupDex"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvStrength"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Strength"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etStrength"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvStrengthMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupDex"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvConstitution"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Constitution"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etConstitution"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvConstitutionMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupDex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupCon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/groupStr"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvDexterity"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Dexterity"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etDexterity"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDexterityMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/groupInt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@drawable/customborder"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/groupWis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupStr">
+
+            <TextView
+                android:id="@+id/tvIntelligence"
+                android:layout_width="80sp"
+                android:layout_height="25dp"
+                android:text="Intelligence"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etIntelligence"
+                android:layout_width="80sp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="number|numberSigned"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvIntelligenceMod"
+                android:layout_width="80sp"
+                android:layout_height="30dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

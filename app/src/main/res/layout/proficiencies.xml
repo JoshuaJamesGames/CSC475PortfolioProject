@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/proficiencyBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/greycustomborder"
+            android:elevation="2dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <RadioButton
+                android:id="@+id/rbSleightOfHand"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Sleight Of Hand"
+                app:layout_constraintBottom_toTopOf="@+id/rbStealth"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbReligion" />
+
+            <RadioButton
+                android:id="@+id/rbExpertSleightOfHand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbSleightOfHand"
+                app:layout_constraintTop_toTopOf="@+id/rbSleightOfHand" />
+
+            <RadioButton
+                android:id="@+id/rbReligion"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Religion"
+                app:layout_constraintBottom_toTopOf="@+id/rbSleightOfHand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPersuasion" />
+
+            <RadioButton
+                android:id="@+id/rbExpertReligion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbReligion"
+                app:layout_constraintTop_toTopOf="@+id/rbReligion" />
+
+            <RadioButton
+                android:id="@+id/rbPersuasion"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Persuasion"
+                app:layout_constraintBottom_toTopOf="@+id/rbReligion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPerformance" />
+
+            <RadioButton
+                android:id="@+id/rbExpertPersuasion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbPersuasion"
+                app:layout_constraintTop_toTopOf="@+id/rbPersuasion" />
+
+            <RadioButton
+                android:id="@+id/rbPerformance"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Performance"
+                app:layout_constraintBottom_toTopOf="@+id/rbPersuasion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPerception" />
+
+            <RadioButton
+                android:id="@+id/rbExpertPerformance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbPerformance"
+                app:layout_constraintTop_toTopOf="@+id/rbPerformance" />
+
+            <RadioButton
+                android:id="@+id/rbPerception"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Perception"
+                app:layout_constraintBottom_toTopOf="@+id/rbPerformance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbNature" />
+
+            <RadioButton
+                android:id="@+id/rbExpertPerception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbPerception"
+                app:layout_constraintTop_toTopOf="@+id/rbPerception" />
+
+            <RadioButton
+                android:id="@+id/rbNature"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Nature"
+                app:layout_constraintBottom_toTopOf="@+id/rbPerception"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbMedicine" />
+
+            <RadioButton
+                android:id="@+id/rbExpertNature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbNature"
+                app:layout_constraintTop_toTopOf="@+id/rbNature" />
+
+            <RadioButton
+                android:id="@+id/rbMedicine"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Medicine"
+                app:layout_constraintBottom_toTopOf="@+id/rbNature"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbInvestigation" />
+
+            <RadioButton
+                android:id="@+id/rbExpertMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbMedicine"
+                app:layout_constraintTop_toTopOf="@+id/rbMedicine" />
+
+            <RadioButton
+                android:id="@+id/rbInvestigation"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Investigation"
+                app:layout_constraintBottom_toTopOf="@+id/rbMedicine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbIntimidation" />
+
+            <RadioButton
+                android:id="@+id/rbExpertInvestigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbInvestigation"
+                app:layout_constraintTop_toTopOf="@+id/rbInvestigation" />
+
+            <RadioButton
+                android:id="@+id/rbIntimidation"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Intimidation"
+                app:layout_constraintBottom_toTopOf="@+id/rbInvestigation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbInsight" />
+
+            <RadioButton
+                android:id="@+id/rbExpertIntimidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbIntimidation"
+                app:layout_constraintTop_toTopOf="@+id/rbIntimidation" />
+
+            <RadioButton
+                android:id="@+id/rbInsight"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Insight"
+                app:layout_constraintBottom_toTopOf="@+id/rbIntimidation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbHistory" />
+
+            <RadioButton
+                android:id="@+id/rbExpertInsight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbInsight"
+                app:layout_constraintTop_toTopOf="@+id/rbInsight" />
+
+            <RadioButton
+                android:id="@+id/rbHistory"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="History"
+                app:layout_constraintBottom_toTopOf="@+id/rbInsight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbDeception" />
+
+            <RadioButton
+                android:id="@+id/rbExpertHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbHistory"
+                app:layout_constraintTop_toTopOf="@+id/rbHistory" />
+
+            <RadioButton
+                android:id="@+id/rbDeception"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Deception"
+                app:layout_constraintBottom_toTopOf="@+id/rbHistory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbAthletics" />
+
+            <RadioButton
+                android:id="@+id/rbExpertDeception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbDeception"
+                app:layout_constraintTop_toTopOf="@+id/rbDeception" />
+
+            <RadioButton
+                android:id="@+id/rbAthletics"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Athletics"
+                app:layout_constraintBottom_toTopOf="@+id/rbDeception"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbArcana" />
+
+            <RadioButton
+                android:id="@+id/rbExpertAthletics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbAthletics"
+                app:layout_constraintTop_toTopOf="@+id/rbAthletics" />
+
+            <RadioButton
+                android:id="@+id/rbArcana"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Arcana"
+                app:layout_constraintBottom_toTopOf="@+id/rbAthletics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+
+            <RadioButton
+                android:id="@+id/rbExpertArcana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbArcana"
+                app:layout_constraintTop_toTopOf="@+id/rbArcana" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Animal Handling"
+                app:layout_constraintBottom_toTopOf="@+id/rbArcana"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbAcrobatics" />
+
+            <RadioButton
+                android:id="@+id/rbExpertAnimalHandling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/radioButton3"
+                app:layout_constraintTop_toTopOf="@+id/radioButton3" />
+
+            <RadioButton
+                android:id="@+id/rbStealth"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Stealth"
+                app:layout_constraintBottom_toTopOf="@+id/rbSurvival"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbSleightOfHand" />
+
+            <RadioButton
+                android:id="@+id/rbExpertStealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbStealth"
+                app:layout_constraintTop_toTopOf="@+id/rbStealth" />
+
+            <RadioButton
+                android:id="@+id/rbSurvival"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Survival"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbStealth" />
+
+            <RadioButton
+                android:id="@+id/rbExpertSurvival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbSurvival"
+                app:layout_constraintTop_toTopOf="@+id/rbSurvival" />
+
+            <LinearLayout
+                android:id="@+id/groupCha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupWis">
+
+                <TextView
+                    android:id="@+id/tvCharisma"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Charisma"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etCharisma"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvCharismaMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupWis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/groupCha"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupInt">
+
+                <TextView
+                    android:id="@+id/tvWisdom"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Wisdom"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etWisdom"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvWisdomMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupStr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/groupDex"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvStrength"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Strength"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etStrength"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvStrengthMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupCon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/groupInt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupDex">
+
+                <TextView
+                    android:id="@+id/tvConstitution"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Constitution"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etConstitution"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvConstitutionMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupDex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/groupCon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupStr">
+
+                <TextView
+                    android:id="@+id/tvDexterity"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Dexterity"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etDexterity"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvDexterityMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupInt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/groupWis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/groupCon">
+
+                <TextView
+                    android:id="@+id/tvIntelligence"
+                    android:layout_width="80sp"
+                    android:layout_height="25dp"
+                    android:text="Intelligence"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etIntelligence"
+                    android:layout_width="80sp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:inputType="number|numberSigned"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvIntelligenceMod"
+                    android:layout_width="80sp"
+                    android:layout_height="30dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rbAcrobatics"
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Acrobatics"
+                app:layout_constraintBottom_toTopOf="@+id/radioButton3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/rbExpertAcrobatics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/rbAcrobatics"
+                app:layout_constraintTop_toTopOf="@+id/rbAcrobatics" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
