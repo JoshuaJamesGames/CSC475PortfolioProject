@@ -74,6 +74,9 @@ class AddNameAndDescription: Fragment() {
             replace(loadFragment(AddCharacter(), characterName))
         }
         btnDelete.setOnClickListener{
+            sharedPrefs.edit(commit = true){
+                remove(etAddName.text.toString())
+            }
             replace(loadFragment(AddCharacter(), characterName))
         }
         return view
