@@ -52,9 +52,17 @@ class AddNameAndDescription: Fragment() {
 
         val characterName = requireArguments().getString("characterName")
 
+        val equipmentName = arguments?.getString("equipmentName")
+
+        val prefName = characterName.plus(tvTitle.text)
+        val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences(prefName, Context.MODE_PRIVATE)
+        if (equipmentName != null) {
+            etAddName.setText(equipmentName.toString())
+            etAddDescription.setText(sharedPrefs.getString(equipmentName, null))
+        }
+
         btnSave.setOnClickListener{
-            val prefName = characterName.plus(tvTitle.text)
-            val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences(prefName, Context.MODE_PRIVATE)
+
             if(etAddName.text.toString().isNotEmpty()){
                 sharedPrefs.edit(commit = true) {
                     putString(

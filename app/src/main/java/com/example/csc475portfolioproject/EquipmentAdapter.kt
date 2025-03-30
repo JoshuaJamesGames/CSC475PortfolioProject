@@ -5,19 +5,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.csc475portfolioproject.CharacterAdapter.OnCharacterClickListener
 
 class EquipmentAdapter(private val dataSet: MutableMap<String, *>) :
     RecyclerView.Adapter<EquipmentAdapter.ViewHolder>() {
 
+    private var listener: OnEquipmentClickListener? = null
+    fun setOnButtonClickListener(listener: OnEquipmentClickListener) {
+        this.listener = listener
+    }
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder)
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-            // Define click listener for the ViewHolder's View
-            val tvEquipedItemDescription: TextView = view.findViewById(R.id.tvEquipmentDescription)
-            val tvEquipmentName: TextView = view.findViewById(R.id.tvEquipmentName)
+        // Define click listener for the ViewHolder's View
+        val tvEquipedItemDescription: TextView = view.findViewById(R.id.tvEquipmentDescription)
+        val tvEquipmentName: TextView = view.findViewById(R.id.tvEquipmentName)
+        val equipmentRowView: View  = view
 
     }
 
@@ -38,9 +44,17 @@ class EquipmentAdapter(private val dataSet: MutableMap<String, *>) :
         // contents of the view with that element
         viewHolder.tvEquipedItemDescription.text = dataSet[dataSetKey].toString()
         viewHolder.tvEquipmentName.text = dataSetKey
+
+        viewHolder.equipmentRowView.setOnClickListener {
+            listener?.onButtonEditClick(dataSetKey)
+        }
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
 
+    interface OnEquipmentClickListener {
+        fun onButtonEditClick(dataSetKey: String)
+    }
 }

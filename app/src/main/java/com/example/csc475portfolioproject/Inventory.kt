@@ -18,19 +18,40 @@ class Inventory : Fragment(){
         val dataset = sharedPrefs.all
         val equipmentAdapter = EquipmentAdapter(dataset)
 
+
         val rcvEquippedItems: RecyclerView = view.findViewById(R.id.rcvEquippedItems)
         rcvEquippedItems.layoutManager = LinearLayoutManager(view.context)
         rcvEquippedItems.adapter = equipmentAdapter
+
+        equipmentAdapter.setOnButtonClickListener(object: EquipmentAdapter.OnEquipmentClickListener{
+
+            override fun onButtonEditClick(dataSetKey: String) {
+
+                replace(loadFragment(AddNameAndDescription(), characterName, "Equipment", dataSetKey))
+
+            }
+        })
     }
 
-    private fun getInventory(view: View){
-        val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
-        val dataset = arrayOf("Greater Healing Potion", "Torch", "50 feet of Rope")
+    private fun getInventory(view: View, characterName: String?){
+        val prefName = characterName.plus("Inventory")
+        val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences(prefName, Context.MODE_PRIVATE)
+        val dataset = sharedPrefs.all
         val inventoryAdapter = InventoryAdapter(dataset)
 
         val rcvInventory: RecyclerView = view.findViewById(R.id.rcvInventory)
         rcvInventory.layoutManager = LinearLayoutManager(view.context)
         rcvInventory.adapter = inventoryAdapter
+
+        inventoryAdapter.setOnButtonClickListener(object: InventoryAdapter.OnInventoryClickListener{
+
+            override fun onButtonEditClick(dataSetKey: String) {
+
+                replace(loadFragment(AddNameAndDescription(), characterName, "Inventory", dataSetKey))
+
+            }
+        })
+
     }
     fun replace(fragment: Fragment) {
 
@@ -41,12 +62,12 @@ class Inventory : Fragment(){
 
     }
 
-    //private val characterName = arguments?.getString("characterName")
 
-    private fun loadFragment(fragment: Fragment, characterName: String?, addType: String?): Fragment{
+    private fun loadFragment(fragment: Fragment, characterName: String?, addType: String?, equipmentName: String?): Fragment{
         val newBundle = Bundle()
         newBundle.putString("characterName", characterName)
         newBundle.putString("addType", addType)
+        newBundle.putString("equipmentName", equipmentName)
         val loadFragment: Fragment = fragment
         loadFragment.arguments = newBundle
         return loadFragment
@@ -62,15 +83,15 @@ class Inventory : Fragment(){
 
         val fabAddEquipment: FloatingActionButton = view.findViewById(R.id.fabAddEquippedItem)
         fabAddEquipment.setOnClickListener {
-            replace(loadFragment(AddNameAndDescription(), characterName, "Equipment"))
+            replace(loadFragment(AddNameAndDescription(), characterName, "Equipment",null))
         }
 
         val fabAddInventory: FloatingActionButton = view.findViewById(R.id.fabAddInventory)
         fabAddInventory.setOnClickListener {
-            replace(loadFragment(AddNameAndDescription(), characterName, "Inventory"))
+            replace(loadFragment(AddNameAndDescription(), characterName, "Inventory", null))
         }
         getEquipment(view, characterName)
-        getInventory(view)
+        getInventory(view, characterName)
 
         return view
     }
