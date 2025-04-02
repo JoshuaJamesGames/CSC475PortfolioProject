@@ -1,102 +1,119 @@
 package com.example.csc475portfolioproject
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.RadioButton
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 
 class Proficiencies : Fragment(){
 
-    private fun makeCheckable(radioButton: RadioButton){
 
-        radioButton.setOnClickListener{
-            Log.i(TAG,radioButton.isChecked.toString())
-            radioButton.isChecked = !radioButton.isChecked
 
+    private fun setProficiencies(view: View, characterName: String?){
+        val prefName = characterName.plus("Proficiencies")
+        val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences(prefName, Context.MODE_PRIVATE)
+        val dataset = sharedPrefs.all
+
+        fun makeCheckable(checkBox: CheckBox){
+            if(dataset[checkBox.id.toString()] !=null){
+                if(dataset[checkBox.id.toString()] as Boolean){
+                    checkBox.isChecked = true
+                }
+
+            }
+            checkBox.setOnClickListener{
+
+                if(checkBox.isChecked) {
+                    sharedPrefs.edit(commit = true) {
+                        putBoolean(checkBox.id.toString(), true)
+                    }
+                }else{
+                    sharedPrefs.edit(commit = true) {
+                        putBoolean(checkBox.id.toString(), false)
+                    }
+                }
+            }
 
         }
-    }
 
-    private fun setProficiencies(view: View){
-        val rbAcrobatics = view.findViewById<RadioButton>(R.id.rbAcrobatics)
-        rbAcrobatics.isChecked = true
+
+        val rbAcrobatics = view.findViewById<CheckBox>(R.id.rbAcrobatics)
         makeCheckable(rbAcrobatics)
-        val rbExpertAcrobatics = view.findViewById<RadioButton>(R.id.rbExpertAcrobatics)
+        val rbExpertAcrobatics = view.findViewById<CheckBox>(R.id.rbExpertAcrobatics)
         makeCheckable(rbExpertAcrobatics)
-        val rbAnimalHandling = view.findViewById<RadioButton>(R.id.rbAnimalHandling)
+        val rbAnimalHandling = view.findViewById<CheckBox>(R.id.rbAnimalHandling)
         makeCheckable(rbAnimalHandling)
-        val rbExpertAnimalHandling = view.findViewById<RadioButton>(R.id.rbExpertAnimalHandling)
+        val rbExpertAnimalHandling = view.findViewById<CheckBox>(R.id.rbExpertAnimalHandling)
         makeCheckable(rbExpertAnimalHandling)
-        val rbArcana = view.findViewById<RadioButton>(R.id.rbArcana)
+        val rbArcana = view.findViewById<CheckBox>(R.id.rbArcana)
         makeCheckable(rbArcana)
-        val rbExpertArcana = view.findViewById<RadioButton>(R.id.rbExpertArcana)
+        val rbExpertArcana = view.findViewById<CheckBox>(R.id.rbExpertArcana)
         makeCheckable(rbExpertArcana)
-        val rbAthletics = view.findViewById<RadioButton>(R.id.rbAthletics)
+        val rbAthletics = view.findViewById<CheckBox>(R.id.rbAthletics)
         makeCheckable(rbAthletics)
-        val rbExpertAthletics = view.findViewById<RadioButton>(R.id.rbExpertAthletics)
+        val rbExpertAthletics = view.findViewById<CheckBox>(R.id.rbExpertAthletics)
         makeCheckable(rbExpertAthletics)
-        val rbDeception = view.findViewById<RadioButton>(R.id.rbDeception)
+        val rbDeception = view.findViewById<CheckBox>(R.id.rbDeception)
         makeCheckable(rbDeception)
-        val rbExpertDeception = view.findViewById<RadioButton>(R.id.rbExpertDeception)
+        val rbExpertDeception = view.findViewById<CheckBox>(R.id.rbExpertDeception)
         makeCheckable(rbExpertDeception)
-        val rbHistory = view.findViewById<RadioButton>(R.id.rbHistory)
+        val rbHistory = view.findViewById<CheckBox>(R.id.rbHistory)
         makeCheckable(rbHistory)
-        val rbExpertHistory = view.findViewById<RadioButton>(R.id.rbExpertHistory)
+        val rbExpertHistory = view.findViewById<CheckBox>(R.id.rbExpertHistory)
         makeCheckable(rbExpertHistory)
-        val rbInsight = view.findViewById<RadioButton>(R.id.rbInsight)
+        val rbInsight = view.findViewById<CheckBox>(R.id.rbInsight)
         makeCheckable(rbInsight)
-        val rbExpertInsight = view.findViewById<RadioButton>(R.id.rbExpertInsight)
+        val rbExpertInsight = view.findViewById<CheckBox>(R.id.rbExpertInsight)
         makeCheckable(rbExpertInsight)
-        val rbIntimidation = view.findViewById<RadioButton>(R.id.rbIntimidation)
+        val rbIntimidation = view.findViewById<CheckBox>(R.id.rbIntimidation)
         makeCheckable(rbIntimidation)
-        val rbExpertIntimidation = view.findViewById<RadioButton>(R.id.rbExpertIntimidation)
+        val rbExpertIntimidation = view.findViewById<CheckBox>(R.id.rbExpertIntimidation)
         makeCheckable(rbExpertIntimidation)
-        val rbInvestigation = view.findViewById<RadioButton>(R.id.rbInvestigation)
+        val rbInvestigation = view.findViewById<CheckBox>(R.id.rbInvestigation)
         makeCheckable(rbInvestigation)
-        val rbExpertInvestigation = view.findViewById<RadioButton>(R.id.rbExpertInvestigation)
+        val rbExpertInvestigation = view.findViewById<CheckBox>(R.id.rbExpertInvestigation)
         makeCheckable(rbExpertInvestigation)
-        val rbMedicine = view.findViewById<RadioButton>(R.id.rbMedicine)
+        val rbMedicine = view.findViewById<CheckBox>(R.id.rbMedicine)
         makeCheckable(rbMedicine)
-        val rbExpertMedicine = view.findViewById<RadioButton>(R.id.rbExpertMedicine)
+        val rbExpertMedicine = view.findViewById<CheckBox>(R.id.rbExpertMedicine)
         makeCheckable(rbExpertMedicine)
-        val rbNature = view.findViewById<RadioButton>(R.id.rbNature)
+        val rbNature = view.findViewById<CheckBox>(R.id.rbNature)
         makeCheckable(rbNature)
-        val rbExpertNature = view.findViewById<RadioButton>(R.id.rbExpertNature)
+        val rbExpertNature = view.findViewById<CheckBox>(R.id.rbExpertNature)
         makeCheckable(rbExpertNature)
-        val rbPerception = view.findViewById<RadioButton>(R.id.rbPerception)
+        val rbPerception = view.findViewById<CheckBox>(R.id.rbPerception)
         makeCheckable(rbPerception)
-        val rbExpertPerception = view.findViewById<RadioButton>(R.id.rbExpertPerception)
+        val rbExpertPerception = view.findViewById<CheckBox>(R.id.rbExpertPerception)
         makeCheckable(rbExpertPerception)
-        val rbPerformance = view.findViewById<RadioButton>(R.id.rbPerformance)
+        val rbPerformance = view.findViewById<CheckBox>(R.id.rbPerformance)
         makeCheckable(rbPerformance)
-        val rbExpertPerformance = view.findViewById<RadioButton>(R.id.rbExpertPerformance)
+        val rbExpertPerformance = view.findViewById<CheckBox>(R.id.rbExpertPerformance)
         makeCheckable(rbExpertPerformance)
-        val rbPersuasion = view.findViewById<RadioButton>(R.id.rbPersuasion)
+        val rbPersuasion = view.findViewById<CheckBox>(R.id.rbPersuasion)
         makeCheckable(rbPersuasion)
-        val rbExpertPersuasion = view.findViewById<RadioButton>(R.id.rbExpertPersuasion)
+        val rbExpertPersuasion = view.findViewById<CheckBox>(R.id.rbExpertPersuasion)
         makeCheckable(rbExpertPersuasion)
-        val rbReligion = view.findViewById<RadioButton>(R.id.rbReligion)
+        val rbReligion = view.findViewById<CheckBox>(R.id.rbReligion)
         makeCheckable(rbReligion)
-        val rbExpertReligion = view.findViewById<RadioButton>(R.id.rbExpertReligion)
+        val rbExpertReligion = view.findViewById<CheckBox>(R.id.rbExpertReligion)
         makeCheckable(rbExpertReligion)
-        val rbSleightOfHand = view.findViewById<RadioButton>(R.id.rbSleightOfHand)
+        val rbSleightOfHand = view.findViewById<CheckBox>(R.id.rbSleightOfHand)
         makeCheckable(rbSleightOfHand)
-        val rbExpertSleightOfHand = view.findViewById<RadioButton>(R.id.rbExpertSleightOfHand)
+        val rbExpertSleightOfHand = view.findViewById<CheckBox>(R.id.rbExpertSleightOfHand)
         makeCheckable(rbExpertSleightOfHand)
-        val rbStealth = view.findViewById<RadioButton>(R.id.rbStealth)
+        val rbStealth = view.findViewById<CheckBox>(R.id.rbStealth)
         makeCheckable(rbStealth)
-        val rbExpertStealth = view.findViewById<RadioButton>(R.id.rbExpertStealth)
+        val rbExpertStealth = view.findViewById<CheckBox>(R.id.rbExpertStealth)
         makeCheckable(rbExpertStealth)
-        val rbSurvival = view.findViewById<RadioButton>(R.id.rbSurvival)
+        val rbSurvival = view.findViewById<CheckBox>(R.id.rbSurvival)
         makeCheckable(rbSurvival)
-        val rbExpertSurvival = view.findViewById<RadioButton>(R.id.rbExpertSurvival)
+        val rbExpertSurvival = view.findViewById<CheckBox>(R.id.rbExpertSurvival)
         makeCheckable(rbExpertSurvival)
 
 
@@ -130,7 +147,7 @@ class Proficiencies : Fragment(){
                 return foundData.toString()
             }
 
-            setProficiencies(view)
+            setProficiencies(view, characterName)
 
             view.findViewById<EditText>(R.id.etStrength).setText(getDataWithKey("Str: "))
             view.findViewById<EditText>(R.id.etDexterity).setText(getDataWithKey("Dex: "))

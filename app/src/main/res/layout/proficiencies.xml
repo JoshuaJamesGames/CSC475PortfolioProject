@@ -25,7 +25,7 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbSleightOfHand"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -34,14 +34,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbReligion" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertSleightOfHand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbSleightOfHand"
                 app:layout_constraintTop_toTopOf="@+id/rbSleightOfHand" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbReligion"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -50,14 +50,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbPersuasion" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertReligion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbReligion"
                 app:layout_constraintTop_toTopOf="@+id/rbReligion" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbPersuasion"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -66,14 +66,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbPerformance" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertPersuasion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbPersuasion"
                 app:layout_constraintTop_toTopOf="@+id/rbPersuasion" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbPerformance"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -82,14 +82,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbPerception" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertPerformance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbPerformance"
                 app:layout_constraintTop_toTopOf="@+id/rbPerformance" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbPerception"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -98,14 +98,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbNature" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertPerception"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbPerception"
                 app:layout_constraintTop_toTopOf="@+id/rbPerception" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbNature"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -114,14 +114,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbMedicine" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertNature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbNature"
                 app:layout_constraintTop_toTopOf="@+id/rbNature" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbMedicine"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -130,14 +130,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbInvestigation" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertMedicine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbMedicine"
                 app:layout_constraintTop_toTopOf="@+id/rbMedicine" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbInvestigation"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -146,14 +146,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbIntimidation" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertInvestigation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbInvestigation"
                 app:layout_constraintTop_toTopOf="@+id/rbInvestigation" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbIntimidation"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -162,14 +162,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbInsight" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertIntimidation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbIntimidation"
                 app:layout_constraintTop_toTopOf="@+id/rbIntimidation" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbInsight"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -178,14 +178,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbHistory" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertInsight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbInsight"
                 app:layout_constraintTop_toTopOf="@+id/rbInsight" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbHistory"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -194,14 +194,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbDeception" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertHistory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbHistory"
                 app:layout_constraintTop_toTopOf="@+id/rbHistory" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbDeception"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -210,14 +210,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbAthletics" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertDeception"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbDeception"
                 app:layout_constraintTop_toTopOf="@+id/rbDeception" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbAthletics"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -226,14 +226,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbArcana" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertAthletics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbAthletics"
                 app:layout_constraintTop_toTopOf="@+id/rbAthletics" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbArcana"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -242,14 +242,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbAnimalHandling" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertArcana"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbArcana"
                 app:layout_constraintTop_toTopOf="@+id/rbArcana" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbAnimalHandling"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -258,14 +258,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbAcrobatics" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertAnimalHandling"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbAnimalHandling"
                 app:layout_constraintTop_toTopOf="@+id/rbAnimalHandling" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbStealth"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -274,14 +274,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbSleightOfHand" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertStealth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/rbStealth"
                 app:layout_constraintTop_toTopOf="@+id/rbStealth" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbSurvival"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
@@ -290,7 +290,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rbStealth" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertSurvival"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -513,21 +513,24 @@
 
             </LinearLayout>
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbAcrobatics"
                 android:layout_width="140sp"
                 android:layout_height="wrap_content"
                 android:checked="false"
+                android:clickable="false"
                 android:text="Acrobatics"
                 app:layout_constraintBottom_toTopOf="@+id/rbAnimalHandling"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/rbExpertAcrobatics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
+                android:clickable="false"
+                android:focusable="auto"
                 app:layout_constraintEnd_toStartOf="@+id/rbAcrobatics"
                 app:layout_constraintTop_toTopOf="@+id/rbAcrobatics" />
 
