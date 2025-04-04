@@ -42,7 +42,6 @@ class CharacterList: Fragment() {
             }
             override fun onButtonEditClick(dataSetKey: String) {
 
-
                 val bundle = Bundle()
                 bundle.putString("characterName", dataSetKey)
                 val fragment = AddCharacter()

@@ -26,7 +26,7 @@ class CharacterSheet : Fragment() {
                 character.toString().substring(1, character.toString().length - 1).split(", ")
 
             fun getDataWithKey(key: String): String {
-                var foundData: String? = null
+                var foundData: String = ""
                 for ((index, value) in characterData.withIndex()) {
 
                     if (value.contains(key)) {

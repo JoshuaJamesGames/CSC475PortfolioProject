@@ -127,7 +127,12 @@ class AddCharacter : Fragment() {
         val tabLayout = view.findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
         val bundle = Bundle()
-        bundle.putString("characterName", requireArguments().getString("characterName") )
+        var characterName: String? = null
+        if(arguments?.isEmpty==false){
+
+            characterName = requireArguments().getString("characterName")
+        }
+        bundle.putString("characterName",  characterName)
         val adapter = CharacterViewPagerAdapter(parentFragmentManager, lifecycle, bundle)
         viewPager2.adapter = adapter
 
